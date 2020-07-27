@@ -23,6 +23,7 @@ const Logo = styled.h1`
 	}
 `;
 
+//header is a sub-component of Page so it can reference props.theme!
 const StyledHeader = styled.header`
   .bar {
     border-bottom: 10px solid ${props => props.theme.black};
