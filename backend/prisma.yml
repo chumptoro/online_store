@@ -1,6 +1,5 @@
-#endpoint: ${env:PRISMA_ENDPOINT}
 endpoint: https://us1.prisma.sh/mark-pham-beaff5/onlinestore2/dev
-# secret: ${env:PRISMA_SECRET}
+
 datamodel: datamodel.graphql
 
 generate:

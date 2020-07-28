@@ -1,5 +1,7 @@
  type User {
-  id: ID! @id
+  id: ID!
   name: String!
   soul: String!
+  email: String
+  favorite_tea: String
 }
