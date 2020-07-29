@@ -8,6 +8,7 @@ const db = require('./db');
 
 function createServer() {
   //the queries will be resolved by resolvers, which are JS functions resided in Query.js and Mutation.js that get us results of query and mutation back.
+  //typeDefs: fech the schema
   return new GraphQLServer({
     typeDefs: 'src/schema.graphql',
     resolvers: {
@@ -17,7 +18,7 @@ function createServer() {
     resolverValidationOptions: {
       requireResolversForResolveType: false,
     },
-    context: req => ({ ...req, db }), //will be sent to resolver functions in Query.js and Mutation.js  so they can access the prisma database and its schema.  context can also pass in any other requests ('req') the query has, like the HTTP request header
+    context: req => ({ ...req, db }), //will be sent to resolver functions in Query.js and Mutation.js  so they can access the prisma database (known here as db) that contains our real data for the siteand its schema.  context can also pass in any other requests ('req') the query has, like the HTTP request header
   });
 }
 

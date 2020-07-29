@@ -1,3 +1,5 @@
+//execute function created in createServer.js
+
 // require() is a builtin nodejs function to import things to this file
 require('dotenv').config({ path: 'variables.env' });
 const createServer = require('./createServer');
