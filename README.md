@@ -4,4 +4,6 @@ run $ npm dev run on both frontend and backend directories to download the depen
 
 This project is an attempt to build a modern online store backend and frontend using the popular NextJS and GraphQL frameworks.
 
-Status: basic CRUDs can be performed and chnages are visible in the frontend
+Status: basic CRUDs can be performed and changes are visible in the frontend
+
+Credit: CSS styling and directory structure is based on https://github.com/wesbos/Advanced-React/
