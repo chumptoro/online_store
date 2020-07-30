@@ -53,4 +53,5 @@ class MyApp extends App {
 }
 
 //wrapping myApp in withData will provide 'this.props.apollo' to MyApp
+//withData is called a high-order component
 export default withData(MyApp); 

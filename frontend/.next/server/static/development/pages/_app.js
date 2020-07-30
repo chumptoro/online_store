@@ -163,7 +163,7 @@ var Header = function Header() {
       lineNumber: 51
     },
     __self: this
-  }, "Sick Fits"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, "Phopreme"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 55
@@ -303,7 +303,7 @@ var Nav = function Nav() {
       lineNumber: 7
     },
     __self: this
-  }, "Items")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, "Shop")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/sell",
     __source: {
       fileName: _jsxFileName,
@@ -738,6 +738,7 @@ function (_App) {
 
   return MyApp;
 }(next_app__WEBPACK_IMPORTED_MODULE_2___default.a); //wrapping myApp in withData will provide 'this.props.apollo' to MyApp
+//withData is called a high-order component
 
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(_lib_withData__WEBPACK_IMPORTED_MODULE_5__["default"])(MyApp));
