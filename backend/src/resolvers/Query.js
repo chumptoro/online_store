@@ -19,11 +19,11 @@ const Query = {
 
 //we can use this when we want common tasks done like getting all items from the database:
 
-const { forwardto } = require('prisma-binding');
-
-const Query = {
-	items: forwardto('db'),
-};
+// const { forwardTo } = require('prisma-binding');
+// 
+// const Query = {
+// 	items: forwardto('db'),
+// };
 
 
 

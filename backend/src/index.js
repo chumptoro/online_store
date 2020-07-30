@@ -1,4 +1,4 @@
-//execute function created in createServer.js
+//execute function created in createServer.js to create the graphql yoga server
 
 // require() is a builtin nodejs function to import things to this file
 require('dotenv').config({ path: 'variables.env' });
