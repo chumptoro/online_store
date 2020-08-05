@@ -62,6 +62,7 @@ injectGlobal`
   button {  font-family: 'radnika_next'; }
 `;
 
+//children is a special React props passed to Page componeny.  children represent Page's children, which are the likes of index.js.  in _apps.js, we specify the children to be <Component {...pageProps} />
 class Page extends Component {
 	render() {
 		return (

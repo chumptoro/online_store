@@ -4,6 +4,7 @@ import gql from 'graphql-tag';
 import styled from 'styled-components';
 import Item from './Item';
 
+//graphql-tag allows us to wrtie GraphQL queries
 const ALL_ITEMS_QUERY = gql`
   query ALL_ITEMS_QUERY {
     items {
@@ -29,18 +30,23 @@ const ItemsList = styled.div`
   margin: 0 auto;
 `;
 
+//Query content is envleoped in a { }, which tells react we wanna write JSX logic instead of string, which ofc is the default for things placed inside html tags
+
 class Items extends Component {
   render() {
     return (
       <Center>
         <Query query={ALL_ITEMS_QUERY}>
-          {({ data, error, loading }) => {
+          {
+            ({ data, error, loading }) => {
             if (loading) return <p>Loading...</p>;
             if (error) return <p>Error: {error.message}</p>;
+            console.log (data)
             return (
               <ItemsList>{data.items.map(item => <Item item={item} key={item.id} />)}</ItemsList>
             );
-          }}
+            }
+          }
         </Query>
       </Center>
     );
@@ -48,3 +54,4 @@ class Items extends Component {
 }
 
 export default Items;
+export { ALL_ITEMS_QUERY } ;

@@ -210,6 +210,19 @@ var Nav = function Nav() {
     },
     __self: this
   }, "Shop")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/sell",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, "Sell")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/signup",
     __source: {
       fileName: _jsxFileName,
@@ -335,7 +348,7 @@ var Inner = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withCo
 }, function (props) {
   return props.theme.red;
 });
-Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["injectGlobal"])(_templateObject(), theme.black);
+Object(styled_components__WEBPACK_IMPORTED_MODULE_3__["injectGlobal"])(_templateObject(), theme.black); //children is a special React props passed to Page componeny.  children represent Page's children, which are the likes of index.js.  in _apps.js, we specify the children to be <Component {...pageProps} />
 
 var Page =
 /*#__PURE__*/
@@ -355,31 +368,31 @@ function (_Component) {
         theme: theme,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 69
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledPage, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 70
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Meta__WEBPACK_IMPORTED_MODULE_2__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 71
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 72
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Inner, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 73
         },
         __self: this
       }, this.props.children)));
@@ -48547,6 +48560,8 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -48572,9 +48587,10 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 // 		<Page>
 // 			<Component {...pageProps} /> 
 // 		</Page>
-// 	);
+// 	); 
 // }
 // export default MyApp; 
+// Component is NextJS's referral to the NextJS Pages. These pages are under the folder frontend/pages. Examples includes index.js. seee https://nextjs.org/docs/advanced-features/custom-app
 //this effectively makes all the pages in dir /pages like index.js and sell.js (which are represented below as <Component>) children of the Page component (created in in components/Page.js).  In the definition of the component Page, these children are referred to as {this.props.children}
 
 var MyApp =
@@ -48598,34 +48614,34 @@ function (_App) {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_2__["Container"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 42
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_4__["ApolloProvider"], {
-        client: this.props.apollo,
+        client: apollo,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 43
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Page__WEBPACK_IMPORTED_MODULE_3__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 44
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Component, {
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Component, _extends({}, pageProps, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 45
         },
         __self: this
-      }))));
+      })))));
     }
   }], [{
     key: "getInitialProps",
     //The static keyword defines a static method for a class. Static methods aren't called on instances of the class. Instead, they're called on the class itself
-    // we are destructuring the Component and ctx elements of an object passed to getInitialProps method of the app
+    // we are destructuring the Component (aka files in components dir like index.js) and ctx elements of an object passed to getInitialProps method of the app
     value: function () {
       var _getInitialProps = _asyncToGenerator(
       /*#__PURE__*/
@@ -48650,7 +48666,7 @@ function (_App) {
                 pageProps = _context.sent;
 
               case 6:
-                //this exposes the query to the user
+                //we will now pass any queries, meaning the graphql queries made by the Component in order to fetch the right data, as a prop to the Component.  as such Items.js
                 //query is an element of the context object, which is an argument given to getInitialProps.  it contains what we wanna query fron the backend database.  we're gonna assign it to a new 'query' element of the object pageProps query
                 //https://nextjs.org/docs/api-reference/data-fetching/getInitialProps#context-object
                 //https://nextjs.org/docs/advanced-features/custom-app#caveats

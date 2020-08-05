@@ -2,8 +2,6 @@
 
 //give us a component that exposes apollo client via a prop
 import withApollo from 'next-with-apollo';
-
-
 import ApolloClient from 'apollo-boost';
 
 //endpoint is our localhost:4444 (see config.js) , which connects us to the graphQL yoga server so we can make queries and mutations!

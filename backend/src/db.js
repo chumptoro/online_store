@@ -1,5 +1,7 @@
 //this file uses Prisma bindings (https://github.com/prisma-labs/prisma-binding) to connects to the remote prisma DB and allows us to query it using JS.  recall that we are not able to do with using the regumar prisma 1 API (https://v1.prisma.io/docs/1.0/reference/prisma-api/mutations-ol0yuoz6go)
 
+//see the rsolvers files mutation.js and query.js to see  primsa binding used to define createItem, updateItem!
+
 const { Prisma } = require('prisma-binding');
 
 const db = new Prisma({
